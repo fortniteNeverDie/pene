@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Imatges/Fons1.png" type="Texture" id=2]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Fons1" type="Sprite" parent="."]
+position = Vector2( 507, 261 )
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+anchor_right = 0.193
+margin_left = 262.0
+margin_top = 197.0
+margin_right = 537.0
+margin_bottom = 262.0
+text = "Play"
+
+[node name="Button2" type="Button" parent="."]
+anchor_right = 0.193
+margin_left = 265.0
+margin_top = 272.0
+margin_right = 540.0
+margin_bottom = 337.0
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 3.0
+margin_top = 581.0
+margin_right = 413.0
+margin_bottom = 595.0
+text = "By Jordi Borràs Dorca in colaboration with Manel Querol Cardona"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
